@@ -1,0 +1,338 @@
+html {
+    margin: 0 0;
+    padding: 0 0;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+}
+
+#main {
+    background-color: antiquewhite;
+    margin: 0 1rem 1rem 1.2rem;
+}
+
+/* scroll */
+
+.scroll-container {
+    
+    overflow: hidden;
+    padding-top: 2rem;
+  }
+
+  .scroll-text {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 20s linear infinite;
+    -webkit-animation: my-animation 20s linear infinite;
+    animation: my-animation 20s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
+
+/* header */
+  
+#title {
+    width: 100%;
+    height: auto;
+}
+
+#title h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    color: rgb(92, 73, 73);
+    text-align: center;
+}
+
+#title h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgb(92, 73, 73);
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+    margin-bottom: 0;
+}
+
+/* scream painting */
+
+.scream {
+    padding: 0.5rem 2rem 0 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    margin-top: 2.4rem;
+    margin-bottom: 0;
+}
+
+figure #img-div {
+    float: left;
+    width: 50%;
+    height: auto;
+    background-color: whitesmoke;
+    border: 1rem solid whitesmoke ;
+    overflow: hidden;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+#image:hover {
+    cursor: pointer;
+}
+
+#img-caption h6 {
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+/* info about painter */
+
+ul li {
+    padding-bottom: 1rem;
+    min-width: 25rem;
+}
+
+article #tribute-info {
+    
+    height: auto;
+    padding-top: 0;
+}
+
+#tribute-info h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+/* quote */
+
+.review {
+    display: none;
+}
+
+.review h5 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.6rem;
+    color: rgb(82, 72, 72);
+    text-align: left;   
+    padding: 0 3rem;
+}
+
+/* selected works */
+
+.special-title {
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(92, 73, 73);
+    margin-top: 0;
+}
+
+.image-special {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.image-special img {
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+    padding: 1rem 1rem;
+}
+
+.image-special img:hover {
+    transition: 0.9s;
+    transform: scale(1.15);
+}
+
+.special-after {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: italic;
+    padding: 0 1rem 0 2rem;
+}
+
+/* Nature paintings */
+
+.nature-title {
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(92, 73, 73);
+}
+
+.image-nature {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.image-nature img {
+    max-width: 30%;
+    height: auto;
+    object-fit: contain;
+    padding: 1rem 1rem;
+}
+
+.image-nature img:hover {
+        transition: 0.9s;
+        transform: scale(1.15);
+    }
+
+.nature-after {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: italic;
+    padding: 0 1rem 0 2rem;
+}
+
+/* footer */
+
+footer h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgb(92, 73, 73);
+    text-align: right;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+}
+
+/* small screens */
+
+@media only screen and (max-width: 768px) {
+
+    .scream {  
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #img-caption h6 {
+        font-size: 1rem;
+    }
+
+    .image-special {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }  
+    
+    .image-special img {
+        max-width: 70%;
+        margin: auto;
+        object-fit: contain;
+        text-align: center;
+    }
+
+    .image-nature {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }  
+    
+    .image-nature img {
+        max-width: 70%;
+        margin: auto;
+        object-fit: contain;
+        text-align: center;
+    }
+
+    .image-nature img:hover {
+        transition: 0.9s;
+        transform: scale(1.05);
+    }
+
+    footer h3 {
+        text-align: center;
+        padding: 0 0;
+    }
+}
+
+@media only screen and (max-width: 887px) {
+    
+    .scream {  
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h6 {
+        font-size: 2rem;
+    }
+
+    .image-special {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }  
+    
+    .image-special img {
+        max-width: 70%;
+        margin: auto;
+        object-fit: contain;
+        text-align: center;
+    }
+
+    .image-special img:hover {
+        transition: 0.9s;
+        transform: scale(1.05);
+    }
+
+    .image-nature {
+        display: flex;
+        flex-direction: column;
+    }  
+
+    .image-nature img {
+        max-width: 80%;
+        margin: auto;
+        object-fit: contain;
+    }
+
+    .image-nature img:hover {
+        transition: 0.9s;
+        transform: scale(1.05);
+    }  
+}
